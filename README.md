@@ -79,3 +79,34 @@ children: [
             ),
           ]
 ```
+
+# Tugas 8
+
+## Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`
+- Navigator.push digunakan untuk menambahkan route baru ke stack route. Navigator.pushReplacement digunakan untuk mengganti route yang sedang aktif dengan route baru.
+- Navigator.pushReplacement akan menghapus semua route yang ada di stack route sebelumnya.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+- Drawer adalah widget yang digunakan untuk membuat menu drawer untuk navigasi.
+- Form adalah widget yang digunakan untuk membuat container form.
+- TextFormField adalah widget yang digunakan untuk membuat form input.
+- DropdownButtonFormField adalah widget yang digunakan untuk membuat form dropdown.
+- Card adalah widget yang digunakan untuk membuat card.
+- ListTile adalah widget yang digunakan untuk membuat list tile.
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: `onPressed`).
+- onChanged
+- onSaved
+- onTap
+- onHover
+- onEditingComplete
+- onFieldSubmitted
+
+## Jelaskan bagaimana cara kerja `Navigator` dalam "mengganti" halaman dari aplikasi Flutter.
+`Navigator` berfungsi menampilkan layar dengan cara ditumpuk seperti stack (Last In, First Out). Untuk merubah layar menggunakan `Navigator.push` untuk ke layar baru dan `Navigator.pop` untuk ke layar sebelumnya
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+- Membuat file `form.dart` untuk dijadikan halaman form. File ini berisi TextFormField untuk menerima input text, DropdownButtonFormField untuk menerima input dari dropdown, dan TextButton untuk menyimpan hasil input.
+- Membuat file `show_form.dart` untuk menampilkan data-data yang telah disimpan form. File ini berisi Card untuk menampilkan data-data yang telah disimpan form dengan cara mengimport data dari `form.dart`.
+- Membuat file `drawer.dart` untuk membuat menu drawer. File ini berisi ListTile untuk menampilkan menu-menu yang ada di drawer.
+- Menambahkan widget Drawer ke file `main.dart`, `form.dart`, dan `show_form.dart` dengan cara mengimport file `drawer.dart` dan menambahkan widget Drawer ke widget Scaffold.
