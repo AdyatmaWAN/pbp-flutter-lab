@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/drawer.dart';
-import 'package:counter_7/show_form.dart';
+import 'package:counter_7/Components/drawer.dart';
+import 'package:counter_7/Page/show_form.dart';
 import 'package:counter_7/main.dart';
 import 'package:intl/intl.dart';
 
