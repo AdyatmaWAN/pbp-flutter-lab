@@ -109,4 +109,26 @@ children: [
 - Membuat file `form.dart` untuk dijadikan halaman form. File ini berisi TextFormField untuk menerima input text, DropdownButtonFormField untuk menerima input dari dropdown, dan TextButton untuk menyimpan hasil input.
 - Membuat file `show_form.dart` untuk menampilkan data-data yang telah disimpan form. File ini berisi Card untuk menampilkan data-data yang telah disimpan form dengan cara mengimport data dari `form.dart`.
 - Membuat file `drawer.dart` untuk membuat menu drawer. File ini berisi ListTile untuk menampilkan menu-menu yang ada di drawer.
-- Menambahkan widget Drawer ke file `main.dart`, `form.dart`, dan `show_form.dart` dengan cara mengimport file `drawer.dart` dan menambahkan widget Drawer ke widget Scaffold.
+- Menambahkan widget Drawer ke file `main.dar
+
+# Tugas 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa, namun tidak disarankan karena akan membingungkan dan sulit untuk di maintain.
+
+##  Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Futurebuilder adalah widget yang digunakan untuk menampilkan widget lainnya ketika proses asynchronous selesai.
+- InkWell adalah widget yang digunakan untuk membuat widget yang dapat diklik.
+
+##  Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Fungsi fetch akan mengambil data dari json dan mengembalikan data tersebut dalam bentuk list.
+- Dengan widget FutureBuild untuk data yang sudah di fetch tadi 
+
+##  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat models untuk menyimpan data dari json.
+- Membuat file fungsi fetch untuk mengambil data dari webservice json.
+- Mengubah data json dan disimpan ke dalam list models
+- Membuat widget FutureBuilder untuk menampilkan data hasil fetch yang sudah disimpan ke dalam list
+- Membuat widget InkWell untuk membuat widget card yang dapat diklik untuk membuka page detail
+- Mengisi card dengan data dari list models
+- Mebuat button back di page detail untuk ke page daftar data yang di fetch
