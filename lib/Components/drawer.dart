@@ -1,9 +1,10 @@
+import 'package:counter_7/Page/myWatchListPage.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/Page/form.dart';
 import 'package:counter_7/Page/show_form.dart';
 
-enum ScreenName { Home, Form, ShowForm }
+enum ScreenName { Home, Form, ShowForm, MyWatchListPage, MyWatchListPageDetail }
 
 class DrawerClass extends StatefulWidget {
   final ScreenName parentScreen;
@@ -61,6 +62,22 @@ class _DrawerClassState extends State<DrawerClass> {
                 );
               } else {
                 Navigator.pop(context);
+              }
+            },
+          ),
+          ListTile(
+            title: Text('My Watch List'), //TODO: Add My Watch List
+            onTap: () {
+              if (widget.parentScreen == ScreenName.MyWatchListPageDetail) {
+                Navigator.pop(context);
+                Navigator.pop(context);
+              } else if (widget.parentScreen == ScreenName.MyWatchListPage) {
+                Navigator.pop(context);
+              } else {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+                );
               }
             },
           ),
